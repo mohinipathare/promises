@@ -1,0 +1,36 @@
+<script>
+const posts=[
+    {
+        title:"post One",
+        body:"this is post one",
+        createdAt:new Date().getTime()
+    },
+
+     {
+         title:"post Two",
+         body:"this is post Two",
+         createdAt:new Date().getTime()
+     }
+];
+//let intervalId=0;
+function getPost()
+{
+    //clearInterval(intervalId);
+    //timerId
+    // intervalId=
+   setTimeout(()=>
+    {
+        let output='';
+        posts.forEach((post,index)=>{
+                   
+            output+=`<li>${post.title} </li>`;
+        
+
+        //console.log(timerId);
+        //console.log("timer running id",intervalId);
+        document.body.innerHTML=output;
+    });
+    },1000);
+}
+getPost();
+</script>
